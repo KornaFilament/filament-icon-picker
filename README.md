@@ -9,13 +9,20 @@ This plugin adds a new icon picker form field and a corresponding table column. 
 
 This can be useful for when you want to customize icons rendered on your frontend, if you want your users to be able to customize navigation icons, add small icons to their models for easy recognition and similar.
 
+## Version compatibility
+| Filament version | Plugin version |
+|------------------|:--------------:| 
+| 2.x              |      1.x       |
+| 3.x              |      2.x       |
+| 4.x              |      3.x       |
+| 5.x              |      4.x       |
+
 ## Installation
 
 You can install the package via composer:
 
-**Filament v4:**
 ```bash
-composer require guava/filament-icon-picker:"^3.0"
+composer require guava/filament-icon-picker"
 ```
 
 Make sure to publish the package assets using:
@@ -23,6 +30,8 @@ Make sure to publish the package assets using:
 ```bash
 php artisan filament:assets
 ```
+
+For certain layouts, you might need to update the `payloads.max_calls` setting in your livewire.php config.
 
 Finally, make sure you have a **custom filament theme** (read [here](https://filamentphp.com/docs/4.x/styling/overview#creating-a-custom-theme) how to create one) and add the following to your **theme.css** file:
 
